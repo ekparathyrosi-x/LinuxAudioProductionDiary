@@ -16,14 +16,14 @@ Jack and PipeWire allow multiple applications to play sounds and routing of audi
 
 I had previously used Jack when testing plugins in Linux. Ubuntu (or Ubuntu Studio) however uses PipeWire as the default audio system. 
 
-## Low latency kernel
-While initially reading about Ubuntu Studio, in addition to the included software I was interested in the low latency kernel that would be available.
+## Low-latency kernel
+While initially reading about Ubuntu Studio, in addition to the included software I was interested in the low-latency kernel that would be available.
 
-I installed the low latency kernel, but there was a catch. 3rd party GPU driver didn't work with the low latency kernel and second display would stay blank without the driver.
+I installed the low-latency kernel, but there was a catch. 3rd party GPU driver didn't work with the low-latency kernel and second display would stay blank without the driver.
 
-I tried using the open source GPU driver with the low latency driver, however there was another issue. If the displays went to sleep, there was a chance that the system froze, one display didn't wake up and I couldn't log in again before rebooting.
+I tried using the open source GPU driver with the low-latency kernel, however there was another issue. If the displays went to sleep, there was a chance that the system froze, one display didn't wake up and I couldn't log in again before rebooting.
 
-In the end I ended up reverting to regular non low latency kernel and 3rd party GPU driver. So far it seems, that the regular kernel is enough.
+In the end I ended up reverting to regular non low-latency kernel and 3rd party GPU driver. So far it seems, that the regular kernel is enough.
 
 ## Alternatives
 On forums I came across while searching for solutions to issues, other people favored distributions such as Arch Linux, Manjaro and Fedora.
@@ -36,3 +36,5 @@ Ubuntu Studio provides a bunch of apps and packages for audio production, but th
 The default settings were pretty good. Messing with the audio system settings was in vain. In the end the default PipeWire seems to work, but there was some issues with configuring Reaper DAW, which I'll describe later.
 
 I installed packages and low latency kernel, but low latency kernel conflicted with GPU drivers. So far regular kernel seems to work well enough.
+
+In the end the Ubuntu Studio Installer was able to install the packages, but the installer tool itself wasn't great to use and crashed multiple times leaving me wondering what did or didn't install.
